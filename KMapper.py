@@ -2,7 +2,22 @@ from copy import deepcopy
 
 def remDuplicate(x):
 	""" Removes duplicate items from a list. """
-  # TODO
+	y = []
+	for i in x:
+		if i not in y:
+			y.append(i)
+	return y
+
+
+def countOnes(num):
+	""" Counts the number of '1's in the binary representation of an integer. """
+
+	count=0
+	while num!=0:
+		if num & 1 :															# Checks digits through bitwise operation
+			count += 1
+		num>>=1
+	return count
 
 def countOnes(num):
 	""" Counts the number of '1's in the binary representation of an integer. """
